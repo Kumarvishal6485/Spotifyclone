@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.849);
+            color: white;
+        }
+
+        #greater,
+        #less,
+        #signup,
+        #login {
+
+            margin-left: 15px;
+            margin-top: 10px;
+            float: right;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .verticalnav {
+            width: 25%;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.849);
+            color: whitesmoke;
+            height: 100vh;
+            position: fixed;
+        }
+
+        #spotfyimg {
+            margin-top: 2px;
+            margin-left: 15px;
+        }
+
+        #home,
+        #search,
+        #library,
+        #playlist,
+        #likedsongs {
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+
+        .main1 {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 75%;
+            border: 2px solid red;
+        }
+
+        #song1,
+        #song2,
+        #song3,
+        #song4,
+        #song5,
+        #song6,
+        #song7,
+        #song8 {
+            width: 25px;
+            height: 30vw;
+            border: 2px solid yellow;
+
+        }
+        .content{
+            position: relative;
+            width: 100vw;
+            left: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="horizontalnav">
+        <header class="nav">
+            <nav>
+                <li id="greater"></li>
+                <li id="less"></li>
+                <li id="signup">Sign up</li>
+                <li id="login">Log In</li>
+            </nav>
+        </header>
+    </section>
+    <section class="verticalnav">
+        <nav>
+            <li id="spotfyimg"><img src="Logo.png" alt="spotifyimg" height="50px" ; width="100px"></li>
+            <li id="home">Home</li>
+            <li id="search">Search</li>
+            <li id="library">Your Library</li>
+            <li id="playlist">Create Playlist</li>
+            <li id="likedsongs">Liked Songs</li>
+        </nav>
+    </section>
+    <section class="content">
+        <div class="main1">
+            <div class="song1">
+                <div><img src="Power.jpg" alt="power" height="100px" width="100px"></div>
+            </div>
+            <div class="song2">
+                <div><img src="" alt=""></div>
+            </div>
+            <div class="song3">
+                <div><img src="" alt=""></div>
+            </div>
+            <div class="song4">
+                <div><img src="" alt=""></div>
+            </div>
+            <div class="song5">
+                <div><img src="" alt=""></div>
+            </div>
+            <div class="song6">
+                <div><img src="" alt=""></div>
+            </div>
+            <div class="song7">
+                <div><img src="" alt=""></div>
+            </div>
+            <div class="song8">
+                <div><img src="" alt=""></div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
