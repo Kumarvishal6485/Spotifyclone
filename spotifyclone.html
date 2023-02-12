@@ -7,36 +7,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify - Web Player</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+    </style>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
         * {
             margin: 0;
             padding: 0;
         }
 
         header {
-            height: 40px;
+            height: 60px;
             background-color: rgba(0, 0, 0, 0.849);
             color: white;
         }
 
         #greater,
         #less,
-        #signup,
+        #btn,
         #login {
-
-            margin-left: 15px;
-            margin-top: 10px;
+            cursor: pointer;
+            margin-right: 15px;
+            margin-top: 20px;
             float: right;
+        }
+
+        #login:hover {
+            transform: scale(1.1);
+        }
+
+        #btn {
+            height: 40px;
+            width: 90px;
+            border-radius: 24px;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 100;
+            background-color: white;
+        }
+
+        #btn:hover {
+            transform: scale(1.1);
+        }
+
+        #login {
+            margin-right: 40px;
         }
 
         li {
             list-style: none;
         }
 
+        #focus {
+            position: absolute;
+            top: 30px;
+            font-family: 'Roboto Slab', serif;
+            margin-left: 30px;
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+        }
+
+        #showall {
+            font-size: 14px;
+            color: white;
+            cursor: pointer;
+            position: absolute;
+            top: 35px;
+            right: 380px;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        #showall:hover,
+        #focus:hover {
+            text-decoration: underline;
+        }
+
+        #spotifyplaylist {
+
+            font-family: 'Roboto Slab', serif;
+            margin-left: 30px;
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+        }
+
+        #playall {
+            font-size: 14px;
+            color: white;
+            cursor: pointer;
+            float: right;
+            margin-right: 13%;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        #playall:hover,
+        #spotifyplaylist:hover {
+            text-decoration: underline;
+        }
+
         .verticalnav {
             top: 0px;
             width: 25%;
             z-index: 1;
-            background-color: rgba(0, 0, 0, 0.808);
+            background-color: rgb(0, 0, 0);
             color: whitesmoke;
             height: 100vh;
             position: fixed;
@@ -54,6 +131,7 @@
         #likedsongs {
             margin-top: 15px;
             margin-left: 10px;
+            cursor: pointer;
         }
 
         .main1 {
@@ -62,8 +140,7 @@
             flex-wrap: wrap;
             width: 1020px;
             height: 800px;
-
-            background-color: rgba(0, 0, 0, 0.281);
+            background: rgba(0, 0, 0, 0.715);
             gap: 5px 5px;
         }
 
@@ -75,10 +152,22 @@
         .song6,
         .song7,
         .song8 {
-            width: 245px;
-            height: 280px;
-
+            width: 230px;
+            height: 300px;
+            color: white;
             background-color: rgba(0, 0, 0, 0.836);
+        }
+
+        .song1:hover,
+        .song2:hover,
+        .song3:hover,
+        .song4:hover,
+        .song5:hover,
+        .song6:hover,
+        .song7:hover,
+        .song8:hover {
+            cursor:pointer;
+            transform: scale(1.05);
         }
 
         .content {
@@ -87,7 +176,7 @@
             left: 25%;
         }
 
-        
+
 
         .head1,
         .head2 {
@@ -104,7 +193,7 @@
             <nav>
                 <li id="greater"></li>
                 <li id="less"></li>
-                <li id="signup">Sign up</li>
+                <li id="signup"><button id="btn">Sign Up</button></li>
                 <li id="login">Log In</li>
             </nav>
         </header>
@@ -112,7 +201,7 @@
     <section class="verticalnav">
         <nav>
             <li id="spotfyimg"><img src="Logo.png" alt="spotifyimg" height="60px" ; width="180px"></li>
-            <li id="home"><img src="" alt="home" height="25px" width="25px" > Home</li>
+            <li id="home">Home</li>
             <li id="search">Search</li>
             <li id="library">Your Library</li>
             <li id="playlist">Create Playlist</li>
@@ -121,31 +210,63 @@
     </section>
     <section class="content">
         <div class="main1">
-            <div class="head1"></div>
+            <div class="head1">
+                <span id="focus">Focus</span>
+                <span id="showall">SHOW ALL</span>
+            </div>
             <div class="song1">
-                <div><img id="song" src="song1.avif" alt="image" height="200px" width="200px" style="margin : 15px 0px 0px 18px; "></div>
+                <div><img id="song" src="song1.avif" alt="image" height="200px" width="200px"
+                        style="margin : 15px 0px 0px 18px; "><br><br>
+                    <p>&nbsp; Peaceful Piano</p>
+                </div>
             </div>
             <div class="song2">
-                <div><img class="songs" src="song2.avif" alt="image" height="200px" width="200px" style="margin : 15px 0px 0px 18px; "></div>
+                <div><img class="songs" src="song2.avif" alt="image" height="200px" width="200px"
+                        style="margin : 15px 0px 0px 18px; "><br><br>
+                    <p>&nbsp; Deep Focus</p>
+                </div>
             </div>
             <div class="song3">
-                <div><img class="songs" src="song3.avif" alt="image" height="200px" width="200px" style="margin : 15px 0px 0px 18px; "></div>
+                <div><img class="songs" src="song3.avif" alt="image" height="200px" width="200px"
+                        style="margin : 15px 0px 0px 18px; ">
+                    <br><br>
+                    <p>&nbsp; Instrumental Study </p>
+                </div>
             </div>
             <div class="song4">
-                <div><img class="songs" src="song4.avif" alt="image" height="200px" width="200px" style="margin : 15px 0px 0px 18px; "></div>
+                <div><img class="songs" src="song4.avif" alt="image" height="200px" width="200px"
+                        style="margin : 15px 0px 0px 18px; ">
+                    <br><br>
+                    <p>&nbsp; Chill Lofi Study</p>
+                </div>
             </div>
-            <div class="head2"></div>
+            <div class="head2">
+                <span id="spotifyplaylist">SPOTIFY PLAYLIST</span>
+                <span id="playall">Play All</span>
+            </div>
             <div class="song5">
-                <div><img class="songs" src="song5.avif" alt="image"height="200px" width="200px" style="margin : 15px 0px 0px 18px; "></div>
+                <div><img class="songs" src="song5.avif" alt="image" height="200px" width="200px"
+                        style="margin : 15px 0px 0px 18px; "><br><br>
+                    <p>&nbsp; Peaceful Piano</p>
+                </div>
             </div>
             <div class="song6">
-                <div><img class="songs" src="song6.avif" alt="image" height="200px" width="200px" style="margin : 15px 0px 0px 18px; "></div>
+                <div><img class="songs" src="song6.avif" alt="image" height="200px" width="200px"
+                        style="margin : 15px 0px 0px 18px; "><br><br>
+                    <p>&nbsp; Deep Focus</p>
+                </div>
             </div>
             <div class="song7">
-                <div><img class="songs" src="song7.avif" alt="image" height="200px" width="200px" style="margin : 15px 0px 0px 18px; "></div>
+                <div><img class="songs" src="song7.avif" alt="image" height="200px" width="200px"
+                        style="margin : 15px 0px 0px 18px; "><br><br>
+                    <p>&nbsp; Instrumental Study </p>
+                </div>
             </div>
             <div class="song8">
-                <div><img class="songs" src="song8.avif" alt="image" height="200px" width="200px" style="margin : 15px 0px 0px 18px; "></div>
+                <div><img class="songs" src="song8.avif" alt="image" height="200px" width="200px"
+                        style="margin : 15px 0px 0px 18px; "><br><br>
+                    <p>&nbsp; Chill Lofi Study</p>
+                </div>
             </div>
         </div>
     </section>
